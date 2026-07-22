@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sns-agent — Privacy Policy & Terms</title>
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --ink: #16202a;
+    --muted: #5b6b70;
+    --accent: #2f6f62;
+    --accent-soft: #e4efec;
+    --line: #d8e0de;
+    --mono-tag-bg: #eef2f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12181c;
+      --surface: #171f24;
+      --ink: #e8edec;
+      --muted: #94a3a0;
+      --accent: #6bb5a1;
+      --accent-soft: #1c2b27;
+      --line: #28322f;
+      --mono-tag-bg: #1b2422;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  body {
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.5rem;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    z-index: 10;
+  }
+  .topbar-name {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .topbar-nav {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+  }
+  .topbar-nav a { color: var(--muted); }
+  .topbar-nav a:hover { color: var(--accent); }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  .doc-head { margin-bottom: 2.5rem; }
+  h1 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.6rem;
+    text-wrap: balance;
+  }
+  .doc-sub { color: var(--muted); font-size: 1rem; margin: 0; }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+  }
+  .tag {
+    font-family: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: var(--mono-tag-bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.25rem 0.55rem;
+    white-space: nowrap;
+  }
+  .tag b { color: var(--ink); font-weight: 600; }
+
+  section { margin-top: 3rem; }
+  section:first-of-type { margin-top: 0; }
+
+  h2 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 0 1rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 4.5rem;
+  }
+  section:first-of-type h2 { border-top: none; padding-top: 0; }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.6rem;
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 1rem; max-width: 62ch; }
+  p.lead { color: var(--muted); font-size: 1.05rem; }
+
+  ul { margin: 0 0 1rem; padding-left: 1.3rem; max-width: 62ch; }
+  li { margin-bottom: 0.45rem; }
+  li::marker { color: var(--muted); }
+
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1.25rem 0;
+  }
+  .callout h3 { margin-top: 0; }
+  .callout ul { margin-bottom: 0; }
+
+  .scope-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+  }
+  .scope-table th, .scope-table td {
+    text-align: left;
+    padding: 0.55rem 0.7rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .scope-table th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .scope-table code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.08rem 0.35rem;
+    border-radius: 3px;
+  }
+  .table-wrap { overflow-x: auto; }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-name">sns-agent</span>
+  <nav class="topbar-nav">
+    <a href="#privacy">개인정보처리방침</a>
+    <a href="#terms">이용약관</a>
+  </nav>
+</div>
+
+<main>
+  <div class="doc-head">
+    <h1>개인정보처리방침 &amp; 이용약관</h1>
+    <p class="doc-sub">sns-agent는 한 명의 개발자가 자신의 소셜 계정을 자동화하기 위해 만든 개인용 도구입니다.</p>
+    <div class="meta-row">
+      <span class="tag">시행일 <b>2026-07-22</b></span>
+      <span class="tag">문의 <b>youritage@gmail.com</b></span>
+      <span class="tag">유형 <b>개인 프로젝트 · 비공개 사용</b></span>
+    </div>
+  </div>
+
+  <section id="overview">
+    <h2>이 도구는 무엇을 하나요</h2>
+    <p class="lead">
+      sns-agent는 개발자 본인 소유의 인스타그램 계정에 새 릴스가 올라오면 이를 감지해 다운로드하고,
+      같은 사람이 소유한 유튜브 채널에 자동으로 업로드한 뒤 원본 게시물 링크를 담은 댓글을 남기는
+      개인용 자동화 스크립트입니다.
+    </p>
+    <p>
+      운영자, 사용자, 데이터 대상이 모두 동일한 한 사람(개발자 본인)이며, 별도의 회원가입이나
+      다중 사용자 기능은 존재하지 않습니다.
+    </p>
+  </section>
+
+  <section id="privacy">
+    <h2>개인정보처리방침</h2>
+
+    <h3>수집·접근하는 데이터</h3>
+    <div class="table-wrap">
+      <table class="scope-table">
+        <thead>
+          <tr><th>연동 서비스</th><th>접근 범위</th><th>용도</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google / YouTube Data API</td>
+            <td><code>youtube.upload</code>, <code>youtube.force-ssl</code></td>
+            <td>본인 소유 채널에 영상 업로드, 업로드한 영상에 첫 댓글 작성</td>
+          </tr>
+          <tr>
+            <td>Instagram Graph API</td>
+            <td>본인 계정의 게시물 조회(읽기 전용)</td>
+            <td>이미 게시된 본인 릴스의 영상 파일·캡션·링크 조회</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <h3>하지 않는 것</h3>
+      <ul>
+        <li>제3자에게 데이터를 판매하거나 공유하지 않습니다.</li>
+        <li>광고, 프로파일링, 본 자동화 목적 외 어떤 용도로도 데이터를 사용하지 않습니다.</li>
+        <li>개발자 본인 외 어떤 사람도 이 데이터에 접근하거나 열람하지 않습니다.</li>
+        <li>사용자 계정을 별도로 만들거나 개인정보를 외부 서버에 전송하지 않습니다.</li>
+      </ul>
+    </div>
+
+    <h3>저장 및 보관</h3>
+    <p>
+      Google OAuth 인증 후 발급되는 refresh token은 개발자 본인이 소유·관리하는 서버(로컬 컴퓨터 또는
+      개인 VPS)의 파일에만 저장되며, 외부로 전송되거나 별도 데이터베이스·클라우드에 업로드되지 않습니다.
+    </p>
+
+    <h3>접근 철회 및 삭제</h3>
+    <p>
+      언제든지 <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google 계정 설정 &gt; 타사 액세스 권한</a>에서
+      sns-agent의 접근 권한을 해제할 수 있습니다. 로컬에 저장된 토큰 파일을 삭제하면 즉시 접근이 중단됩니다.
+    </p>
+  </section>
+
+  <section id="terms">
+    <h2>이용약관</h2>
+    <p>
+      sns-agent는 일반 대중에게 제공되는 서비스가 아니라, 개발자 본인의 콘텐츠 자동화를 위해 만들어진
+      개인용 스크립트입니다. 별도의 가입 절차나 서비스 이용 계약이 존재하지 않습니다.
+    </p>
+    <p>
+      이 도구는 있는 그대로(as-is) 제공되며 어떠한 보증도 하지 않습니다. 유튜브·인스타그램 등 각
+      플랫폼의 자체 이용약관 및 API 이용 정책이 우선 적용됩니다.
+    </p>
+  </section>
+
+  <footer>
+    문의: <a href="mailto:youritage@gmail.com">youritage@gmail.com</a> · 최종 수정 2026-07-22
+  </footer>
+</main>
+</body>
+</html>
